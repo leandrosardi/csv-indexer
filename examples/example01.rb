@@ -11,7 +11,7 @@ source = BlackStack::CSVIndexer.add_indexation({
     #
     # This name must have filename safe characters only. No spaces, no special characters.
     # 
-    :name => 'index01',
+    :name => 'ix_example01',
     # Write a brief description of what you are indexing and why.
     # This parameter is optional.
     # Default: nil.

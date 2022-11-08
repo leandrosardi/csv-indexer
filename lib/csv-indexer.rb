@@ -165,8 +165,119 @@ module BlackStack
                 end
             end # def index
 
-            # search the index
-            def find(key, write_log=true)
+            # search the index.
+            # return a hash description with the matches, and a brief performance report.
+            def find(key, exact_match=true, write_log=true)
+                # if key is an array of values, join them into a string.
+                key = key.join('') if key.is_a?(Array)
+
+                # build the response.
+                ret = {
+                    :matches => [],
+                }
+            
+                # define the logger to use
+                l = write_log ? self.logger : BlackStack::DummyLogger.new
+                        
+                # define the source
+                source = "#{File.expand_path(self.output)}/*.#{ext})}"
+
+                # start time
+                start_time = Time.now
+            
+                # totals
+                total_matches = 0
+            
+                # searching in the indexed files
+                l.log "Search term: #{search.to_s}"
+                files = Dir.glob(source)
+                n = 0 
+                files.each do |file|
+                    # get the name of the file from the full path
+                    name = file.split('/').last
+                    # get the path of the file from the full path
+                    path = file.gsub("/#{name}", '')
+                    # opening log line
+                    l.logs "Searching into #{name}... "
+                    # setting boundaries for the binary search
+                    i = 0
+                    max = `wc -c #{file}`.split(' ').first.to_i
+                    middle = ((i + max) / 2).to_i
+                    # totals
+                    # open file with random access
+                    f = File.open(file, 'r')
+                    # remember middle variable from the previous iteration
+                    prev = -1
+                    # binary search
+                    while i<max
+                        # get the middle of the file
+                        middle = ((i + max) / 2).to_i
+                        # break if the middle is the same as the previous iteration
+                        break if middle==prev
+                        # remember the middle in this iteration
+                        prev = middle
+                        # opening log line
+                        l.logs "#{middle}... "
+                        # go to the middle of the file
+                        f.seek(middle)
+                        # read the line
+                        # the cursor is at the middle of a line
+                        # so, I have to read a second line to get a full line
+                        line = f.readline 
+                        # most probably I landed in the midle of a line, so I have to get the size of the line where I landed.
+                        a = line.split('","')
+                        while a.size < 2 # this saves the situation when the cursor is inside the last field where I place the size of the line
+                            middle -= 1
+                            f.seek(middle)
+                            line = f.readline
+                            a = line.split('","')
+                        end
+                        line_size = a.last.gsub('"', '').to_i
+                        middle -= line_size-line.size+1
+                        # seek and readline again, to get the line from its begining
+                        f.seek(middle)
+                        line = f.readline
+                        # strip the line
+                        line.strip!
+                        # get the first field of the CSV line
+                        fields = CSV.parse_line(line)
+                        row_key = fields[0]
+                        # compare the first field with the search term
+                        if (exact_match.upcase && key == search[:key].upcase) || (!exact_match && row_key =~ /^#{Regexp.escape(key)}.*/i)
+                            # found
+                            l.logf "found (#{row_key})"
+                            ret[:matches] << fields.dup
+                            total_matches += 1
+                            break
+                        else
+                            # not found
+                            if key < search[:key]
+                                # search in the down half
+                                i = middle
+                            else
+                                # search in the up half
+                                max = middle
+                            end
+                            l.logf "not found (#{row_key})"
+                        end
+                    end
+                    # closing the file
+                    f.close
+                    # closing the log line
+                    l.done
+                    # increment file counter
+                    n += 1
+                end
+            
+                end_time = Time.now
+            
+                ret[:enlapsed_seconds] = end_time - start_time
+                ret[:lines_matched] = total_matches
+            
+                l.log "Matches: #{total_matches.to_s}"
+                l.log "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
+
+                ret 
             end # def find
         end
     end # module CSVIndexer

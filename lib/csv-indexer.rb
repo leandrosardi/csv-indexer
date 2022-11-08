@@ -91,11 +91,83 @@ module BlackStack
             def index(write_log=true)
                 # define the logger to use
                 l = write_log ? self.logger : BlackStack::DummyLogger.new
-                
+                # output file extension
+                ext = ".#{self.name}"
+                # index the bites
+                Dir.glob(input).each do |file|
+                    # get the name of the file from the full path
+                    name = file.split('/').last
+                    # get the path of the file from the full path
+                    path = file.gsub("/#{name}", '')
+                    # opening log line
+                    l.logs "Indexing #{name}... "
+                    # get the output filename
+                    output_filename = "#{File.expand_path(self.output)}/#{name.gsub(/\.csv$/, ext)}"
+                    # if output file exists, skip
+                    if File.exists?(output_filename)
+                        l.logf "skip"
+                    else
+                        # open the input file
+                        input_file = File.open(file, 'r')
+                        # import the bite to the database
+                        i = 0
+                        a = []
+                        # iterate lines if input_file
+                        input_file.each_line do |line|
+                            i += 1
+                            fields = []
+                            key = ''
+                            # get the array of fields
+                            row = CSV.parse_line(line)
+                            # build the key
+                            self.keys.each do |k|
+                                colnum = self.mapping[k]
+                                key += row[colnum].gsub('"', '')
+                            end
+                            key = "\"#{key}\""
+                            # add the key as the first field of the index line
+                            fields << key
+                            # add the row number as the second field of the index line
+                            fields << "\"#{i.to_s}\""
+                            # iterate the mapping
+                            self.mapping.each do |k, v|
+                                # get the data from the row
+                                # format the field values for the CSV
+                                fields << "\"#{row[v].gsub('"', '')}\""
+                            end
+                            # add fields to the array
+                            a << fields
+                        end
+                        # sort the array
+                        a.sort!
+                        # get the output file
+                        output_file = File.open(output_filename, 'w')
+                        size = nil
+                        new_size = nil
+                        # write the array to the output file
+                        a.each do |row|
+                            # add the size of the line, in order to be able to do a binary search
+                            line = row.join(',')
+                            # add the size of the line as a last field of the row.
+                            # this value is necessary to run the search.
+                            size = line.size
+                            new_size = size + 1 + 2 + size.to_s.size # 1 comma, 2 double-quotes, and size of the size
+                            new_size += 1 if size.to_s.size < new_size.to_s.size # sum 1 if new_size had 1 more digit than size (e.g. 104 vs 99)
+                            size = new_size
+                            line += ",\"#{size.to_s}\""
+                            output_file.puts line
+                        end
+                        # close the output file
+                        output_file.close
+                        # close log
+                        l.done
+                    end
+                end
             end # def index
+
+            # search the index
+            def find(key, write_log=true)
+            end # def find
         end
-
-
-
     end # module CSVIndexer
 end # module BlackStack

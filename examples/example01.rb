@@ -38,7 +38,7 @@ source = BlackStack::CSVIndexer.add_indexation({
     },
     # List column mapped to the index who are used to build the key of the index.
     # This parameter is mandatory.
-    :keys => [:linkedin_url],
+    :keys => [:linkedin_url, :email],
 })
 
 BlackStack::CSVIndexer.index('index01')

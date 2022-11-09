@@ -4,13 +4,13 @@ CSV-Indexer makes it simple the indexation and searching in large CSV files.
 
 CSV-Indexer is not as robust as Lucence, but it is simple and cost-effective. May index files with millions of rows and find specific rows in matter of seconds.
 
-## Installation
+## 1. Installation
 
 ```bash
 gem install csv-indexer
 ```
 
-## Quick Start
+## 2. Quick Start
 
 1. Download a sample CSV file in the same directory where you are running your Ruby script:
 
@@ -88,7 +88,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 # => Enlapsed seconds: 0.001595287
 ```
 
-## Indexing Many Files
+## 3. Indexing Many Files
 
 You can define the indexation of many files. 
 
@@ -108,7 +108,7 @@ source = BlackStack::CSVIndexer.add_indexation({
 })
 ```
 
-## Indexing by Many Columns
+## 4. Indexing by Many Columns
 
 You can index by many columns.
 
@@ -134,7 +134,7 @@ BlackStack::CSVIndexer.index('ix_example02')
 # => 2022-11-09 16:43:52: Indexing example.csv... done
 ```
 
-## Searching by Many Columns
+## 5. Searching by Many Columns
 
 If you indexed by more than one column, you can choose one or more of those columns for search.
 
@@ -156,7 +156,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 # => Enlapsed seconds: 0.001613454
 ```
 
-## Key Must Be Unique
+## 6. Key Must Be Unique
 
 At this moment, CSV-Indexer returns no more than 1 result.
 
@@ -180,7 +180,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 # => Enlapsed seconds: 0.001480246
 ```
 
-## Case Insensitive
+## 7. Case Insensitive
 
 CSV-Indexer is case-insensitive.
 
@@ -202,7 +202,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 # => Enlapsed seconds: 0.001613454
 ```
 
-## Matching Criteria
+## 8. Matching Criteria
 
 You can find values who match partially with the key.  
 

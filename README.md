@@ -1,6 +1,6 @@
 # CSV Indexer
 
-CSV Indexer makes it simple the indexation and searching in lasge CSV files. 
+CSV Indexer makes it simple the indexation and searching in large CSV files. 
 
 CSV Indexer is not as robust as Lucence, but it is simple and cost-effective. May index files with millions of rows and find specific rows in matter of seconds.
 
@@ -10,8 +10,24 @@ CSV Indexer is not as robust as Lucence, but it is simple and cost-effective. Ma
 gem install csv-indexer
 ```
 
-## Getting Started
+## Quick Start
 
-```ruby
+- wget
+- require
+- setup index
+- run indexation
+- searchng results
 
+## Indexing Many Files
+
+```
+:input=>'./*.csv'
+```
+
+## Indexing by Many Columns
+
+## Searching Parameters
+
+- key sensitive
+- matching method
 

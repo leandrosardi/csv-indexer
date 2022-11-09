@@ -1,4 +1,4 @@
-require_relative '../lib/csv-indexer'
+require 'csv-indexer'
 
 # define a new source
 source = BlackStack::CSVIndexer.add_indexation({
@@ -41,4 +41,6 @@ source = BlackStack::CSVIndexer.add_indexation({
     :keys => [:linkedin_url, :email],
 })
 
-BlackStack::CSVIndexer.index('index01')
+BlackStack::CSVIndexer.index('ix_example01')
+
+BlackStack::CSVIndexer.find('ix_example01', 'linkedin.com/in/adammalone1')

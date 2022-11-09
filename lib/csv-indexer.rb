@@ -116,15 +116,16 @@ module BlackStack
                         input_file.each_line do |line|
                             i += 1
                             fields = []
-                            key = ''
+                            key = []
                             # get the array of fields
                             row = CSV.parse_line(line)
                             # build the key
                             self.keys.each do |k|
                                 colnum = self.mapping[k]
-                                key += row[colnum].gsub('"', '')
+                                # replace '"' by empty string, and '|' with ','  
+                                key << row[colnum].gsub('"', '').gsub('|', ',')
                             end
-                            key = "\"#{key}\""
+                            key = "\"#{key.join('|')}\""
                             # add the key as the first field of the index line
                             fields << key
                             # add the row number as the second field of the index line
@@ -165,11 +166,47 @@ module BlackStack
                 end
             end # def index
 
+            # compare 2 keys.
+            # if !exact_match and if each value in key1 is included in the key2, return 0 
+            # otherwise, return 0 if equal, -1 if key1 < key2, 1 if key1 > key2
+            # this method is used by the binary search.
+            # this method should not be used by the user.
+            #
+            # Example:
+            # compare_keys('Century 21', 'Century 21 LLC', false)
+            #  => 0
+            #
+            # Example:
+            # compare_keys('Century 21', 'Century 21 LLC', true)
+            #  => -1
+            # 
+            def compare_keys(key1, key2, exact_match=true)
+                match = true
+                # get the keys as arrays
+                a1 = key1.split('|')
+                a2 = key2.split('|')
+                # iterate the arrays
+                a2.each_with_index do |k, i|
+                    match = false of k !~ /#{Regexp.escape(a1[i])}/i
+                end
+                return 0 if match && !exact_match
+                # return the result
+                # iterate the arrays
+                a1.each_with_index do |k, i|
+                    # if the keys are different, return the result
+                    return 1 if k < a2[i]
+                    return -1 if k > a2[i]
+                end
+                # if the keys are equal, return 0
+                return 0
+                end
+            end
+
             # search the index.
             # return a hash description with the matches, and a brief performance report.
             def find(key, exact_match=true, write_log=true)
-                # if key is an array of values, join them into a string.
-                key = key.join('') if key.is_a?(Array)
+                # if key is an string, convert it into an array of 1 element
+                key = [key] if key.is_a?(String)
 
                 # build the response.
                 ret = {
@@ -241,9 +278,11 @@ module BlackStack
                         line.strip!
                         # get the first field of the CSV line
                         fields = CSV.parse_line(line)
-                        row_key = fields[0]
+                        row_key = fields[0].split('|')
+                        # compare keys
+                        x = compare_keys(keys, row_keys, exact_match)
                         # compare the first field with the search term
-                        if (exact_match.upcase && key == search[:key].upcase) || (!exact_match && row_key =~ /^#{Regexp.escape(key)}.*/i)
+                        if x == 0
                             # found
                             l.logf "found (#{row_key})"
                             ret[:matches] << fields.dup
@@ -251,7 +290,7 @@ module BlackStack
                             break
                         else
                             # not found
-                            if key < search[:key]
+                            if x == -1
                                 # search in the down half
                                 i = middle
                             else

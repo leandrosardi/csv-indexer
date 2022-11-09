@@ -1,3 +1,5 @@
+![GitHub issues](https://img.shields.io/github/issues/leandrosardi/csv-indexer) ![GitHub](https://img.shields.io/github/license/leandrosardi/csv-indexer) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/leandrosardi/csv-indexer) ![GitHub last commit](https://img.shields.io/github/last-commit/leandrosardi/csv-indexer)
+
 # CSV-Indexer
 
 CSV-Indexer makes it simple the indexation and searching in large CSV files. 

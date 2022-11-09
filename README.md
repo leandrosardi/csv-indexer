@@ -129,6 +129,9 @@ source = BlackStack::CSVIndexer.add_indexation({
     },
     :keys => [:first_name, :last_name],
 })
+
+BlackStack::CSVIndexer.index('ix_example02')
+# => 2022-11-09 16:43:52: Indexing example.csv... done
 ```
 
 ## Searching by Many Columns

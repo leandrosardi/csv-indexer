@@ -7,8 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Leandro Daniel Sardi"]
   s.email       = 'leandro.sardi@expandedventure.com'
   s.files       = [
-    "examples/example01.rb",
-    "examples/example01.csv",
+    'lib/csv-indexer.rb',
   ]
   s.homepage    = 'https://github.com/leandrosardi/csv-indexer'
   s.license     = 'MIT'

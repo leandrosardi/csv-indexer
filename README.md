@@ -27,7 +27,7 @@ require 'csv-indexer'
 3. Setup the index for that CSV file.
 
 ```ruby
-# define the indexation of for `example01.csv`
+# define the indexation of for `example.csv`
 source = BlackStack::CSVIndexer.add_indexation({
     # Assign a unique name for this indexation.
     #
@@ -46,7 +46,7 @@ source = BlackStack::CSVIndexer.add_indexation({
     # The path to the `.csv` file(s) to be indexed.
     # This parameter is optional.
     # Default: './*.csv'
-    :input => './example01.csv',
+    :input => './example.csv',
     # The path to the directory where the index will be stored.
     # This parameter is optional.
     # Default: './'
@@ -75,7 +75,7 @@ Add this line to build the index.
 
 ```ruby
 BlackStack::CSVIndexer.index('ix_example01')
-# => 2022-11-09 15:37:46: Indexing example01.csv... done
+# => 2022-11-09 15:37:46: Indexing example.csv... done
 ```
 
 5. Searching for a specific LinkedIn URL in your index.
@@ -92,7 +92,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 
 You can define the indexation of many files. 
 
-E.g.: Replacing `'./example01.csv'` by `'./*.csv'`.
+E.g.: Replacing `'./example.csv'` by `'./*.csv'`.
 
 ```ruby
 source = BlackStack::CSVIndexer.add_indexation({

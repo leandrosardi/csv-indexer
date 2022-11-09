@@ -202,9 +202,9 @@ module BlackStack
                 # iterate the arrays
                 a1.each_with_index do |k, i|
                     # if the keys are different, return the result
-                    if k < a2[i]
+                    if k.upcase < a2[i].upcase
                         return 1
-                    elsif k > a2[i]
+                    elsif k.upcase > a2[i].upcase
                         return -1
                     end
                 end

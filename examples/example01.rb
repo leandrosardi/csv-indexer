@@ -1,6 +1,6 @@
 require 'csv-indexer'
 
-# define a new source
+# define the indexation of for `example.csv`
 source = BlackStack::CSVIndexer.add_indexation({
     # Assign a unique name for this indexation.
     #
@@ -19,7 +19,7 @@ source = BlackStack::CSVIndexer.add_indexation({
     # The path to the `.csv` file(s) to be indexed.
     # This parameter is optional.
     # Default: './*.csv'
-    :input => './example01.csv',
+    :input => './example.csv',
     # The path to the directory where the index will be stored.
     # This parameter is optional.
     # Default: './'
@@ -44,6 +44,5 @@ source = BlackStack::CSVIndexer.add_indexation({
 BlackStack::CSVIndexer.index('ix_example01')
 
 ret = BlackStack::CSVIndexer.find('ix_example01', 'linkedin.com/in/almu-dan-9808753a')
-
 puts "#{ret[:matches].size.to_s} results found."
 puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"

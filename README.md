@@ -135,7 +135,7 @@ source = BlackStack::CSVIndexer.add_indexation({
 
 If you indexed by more than one column, you can choose one or more of those columns for search.
 
-E.g.:
+E.g.: Replacing `'linkedin.com/in/almu-dan-9808753a'` by `['alan', 'armstrong']`.
 
 ```ruby
 ret = BlackStack::CSVIndexer.find('ix_example02', ['alan', 'armstrong'])
@@ -159,7 +159,7 @@ At this moment, CSV-Indexer returns no more than 1 result.
 
 If there are two or more rows in your index who match with the criteria, CSV-Indexer will return the first that it founds. 
 
-E.g.:
+E.g.: If you remove the `'armstrong'`, you get another Alan.
 
 ```ruby
 ret = BlackStack::CSVIndexer.find('ix_example02', ['alan'])
@@ -181,7 +181,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 
 CSV-Indexer is case-insensitive.
 
-E.g.:
+E.g.: `['alan', 'armstrong']` is the same than `['Alan', 'Armstrong']`.
 
 ```ruby
 ret = BlackStack::CSVIndexer.find('ix_example02', ['Alan', 'Armstrong'])
@@ -201,7 +201,7 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 
 ## Matching Criteria
 
-E.g:
+E.g: `['Ala', 'Armstrong']` works the same than `['Alan', 'Armstrong']` if you add a thirth parameter `exact_match=false`
 
 ```ruby
 ret = BlackStack::CSVIndexer.find('ix_example02', ['Ala', 'Armstrong'], exact_match=false)
@@ -218,3 +218,5 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 # => Email: razorback1@plansandmorellp.com
 # => Enlapsed seconds: 0.001595377
 ```
+
+

@@ -201,6 +201,8 @@ puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"
 
 ## Matching Criteria
 
+You can find values who match partially with the key.  
+
 E.g: `['Ala', 'Armstrong']` works the same than `['Alan', 'Armstrong']` if you add a thirth parameter `exact_match=false`
 
 ```ruby

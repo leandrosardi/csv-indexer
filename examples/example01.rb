@@ -38,9 +38,12 @@ source = BlackStack::CSVIndexer.add_indexation({
     },
     # List column mapped to the index who are used to build the key of the index.
     # This parameter is mandatory.
-    :keys => [:linkedin_url, :email],
+    :keys => [:linkedin_url],
 })
 
 BlackStack::CSVIndexer.index('ix_example01')
 
-BlackStack::CSVIndexer.find('ix_example01', 'linkedin.com/in/adammalone1')
+ret = BlackStack::CSVIndexer.find('ix_example01', 'linkedin.com/in/almu-dan-9808753a')
+
+puts "#{ret[:matches].size.to_s} results found."
+puts "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"

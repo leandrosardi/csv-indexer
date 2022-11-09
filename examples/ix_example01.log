@@ -2,3 +2,452 @@
 2022-11-09 12:44:18: Indexing example01.csv... done
 
 2022-11-09 12:53:03: Indexing example01.csv... skip
+
+2022-11-09 14:29:34: Indexing example01.csv... skip
+
+2022-11-09 14:30:33: Indexing example01.csv... skip
+
+2022-11-09 14:31:08: Indexing example01.csv... skip
+
+2022-11-09 14:31:38: Indexing example01.csv... skip
+2022-11-09 14:31:38: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 14:31:38: Matches: 0
+2022-11-09 14:31:38: Enlapsed seconds: 7.611e-05
+
+2022-11-09 15:01:01: Indexing example01.csv... skip
+2022-11-09 15:01:01: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:01:01: Matches: 0
+2022-11-09 15:01:01: Enlapsed seconds: 0.000107374
+
+2022-11-09 15:01:35: Indexing example01.csv... skip
+
+2022-11-09 15:03:45: Indexing example01.csv... skip
+2022-11-09 15:04:01: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:04:01: Searching into example01.ix_example01... 
+2022-11-09 15:04:01:  > 137177... 
+2022-11-09 15:04:34: Indexing example01.csv... skip
+2022-11-09 15:04:34: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:04:34: Searching into example01.ix_example01... 
+2022-11-09 15:04:34:  > 137177... 
+2022-11-09 15:05:56: Indexing example01.csv... skip
+2022-11-09 15:05:56: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:05:56: Searching into example01.ix_example01... 
+2022-11-09 15:05:56:  > 137177... 
+2022-11-09 15:06:16: Indexing example01.csv... skip
+2022-11-09 15:06:16: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:06:16: Searching into example01.ix_example01... 
+2022-11-09 15:06:16:  > 137177... 
+2022-11-09 15:08:04: Indexing example01.csv... skip
+2022-11-09 15:08:04: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:08:04: Searching into example01.ix_example01... 
+2022-11-09 15:08:04:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:08:06:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:08:07:  > 34220... 
+2022-11-09 15:08:45: Indexing example01.csv... skip
+2022-11-09 15:08:45: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:08:45: Searching into example01.ix_example01... 
+2022-11-09 15:08:45:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:08:45:  > 205693... not found (["linkedin.com/in/phillip-mccullough-08955132", "phillip.mccullough@vanderbilt.edu"])
+2022-11-09 15:08:45:  > 239928... not found (["linkedin.com/in/stehphanie-collins-87563a18", "scollins@ggrc.org"])
+2022-11-09 15:08:45:  > 257128... not found (["linkedin.com/in/tom-wilson-a2856b7a", "twilson@capitolboilerworks.com"])
+2022-11-09 15:08:45:  > 265702... not found (["linkedin.com/in/vincent-law-9801b59", "vlaw@ftc.gov"])
+2022-11-09 15:08:45:  > 270027... not found (["linkedin.com/in/wiebe-bartelink-a16b991", "wiebe.bartelink@msg-global.com"])
+2022-11-09 15:08:45:  > 272142... not found (["linkedin.com/in/yong-qiu-8b692b30", "yqiu@ibm.com"])
+2022-11-09 15:08:45:  > 273200... not found (["linkedin.com/in/yvan-chevrier-5ab81060", "yvan.chevrier@zimmerbiomet.com"])
+2022-11-09 15:08:45:  > 273757... not found (["linkedin.com/in/zevin-barnes-a563b742", "zbarnes@delphinus.com"])
+2022-11-09 15:08:45:  > 273998... not found (["linkedin.com/in/zrswedo", "zachary.swedo@buehler.com"])
+2022-11-09 15:08:45:  > 274148... not found (["linkedin.com/in/zulay-berrio-williams-mba-62193a34", "zwilliams@provident.org"])
+2022-11-09 15:08:45:  > 274216... not found (["linkedin.com/in/zulay-berrio-williams-mba-62193a34", "zwilliams@provident.org"])
+2022-11-09 15:08:45: done
+2022-11-09 15:08:45: Matches: 0
+2022-11-09 15:08:45: Enlapsed seconds: 0.003754988
+
+2022-11-09 15:09:34: Indexing example01.csv... skip
+2022-11-09 15:09:34: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:09:34: Searching into example01.ix_example01... 
+2022-11-09 15:09:34:  > 137177... 
+2022-11-09 15:10:50: Indexing example01.csv... skip
+2022-11-09 15:10:50: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:10:50: Searching into example01.ix_example01... 
+2022-11-09 15:10:50:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:11:09:  > 205693... 
+2022-11-09 15:11:22: Indexing example01.csv... skip
+2022-11-09 15:11:22: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:11:22: Searching into example01.ix_example01... 
+2022-11-09 15:11:22:  > 137177... 
+2022-11-09 15:13:41: Indexing example01.csv... skip
+2022-11-09 15:13:41: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:13:41: Searching into example01.ix_example01... 
+2022-11-09 15:13:41:  > 137177... 
+2022-11-09 15:13:51: Indexing example01.csv... skip
+2022-11-09 15:13:51: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:13:51: Searching into example01.ix_example01... 
+2022-11-09 15:13:51:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:13:51:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:13:51:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:13:51:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:13:51:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:13:51:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:13:51:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:13:51:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:13:51:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:13:51:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:13:51:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:13:51: done
+2022-11-09 15:13:51: Matches: 0
+2022-11-09 15:13:51: Enlapsed seconds: 0.002560053
+
+2022-11-09 15:15:43: Indexing example01.csv... skip
+2022-11-09 15:15:43: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:15:43: Searching into example01.ix_example01... 
+2022-11-09 15:15:43:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:15:43:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:15:43:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:15:43:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:15:43:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:15:43:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:15:43:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:15:43:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:15:43:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:15:43:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:15:43:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:15:43: done
+2022-11-09 15:15:43: Matches: 0
+2022-11-09 15:15:43: Enlapsed seconds: 0.002824167
+
+2022-11-09 15:15:54: Indexing example01.csv... skip
+2022-11-09 15:15:54: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:15:54: Searching into example01.ix_example01... 
+2022-11-09 15:15:54:  > 137177... 
+2022-11-09 15:16:46: Indexing example01.csv... skip
+2022-11-09 15:16:46: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:16:46: Searching into example01.ix_example01... 
+2022-11-09 15:16:46:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:16:46:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:16:46:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:16:46:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:16:46:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:16:46:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:16:46:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:16:46:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:16:46:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:16:46:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:16:46:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:16:46: done
+2022-11-09 15:16:46: Matches: 0
+2022-11-09 15:16:46: Enlapsed seconds: 0.003077903
+
+2022-11-09 15:18:22: Indexing example01.csv... skip
+2022-11-09 15:18:22: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:18:22: Searching into example01.ix_example01... 
+2022-11-09 15:18:22:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:18:22:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:18:22:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:18:22:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:18:22:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:18:22:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:18:22:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:18:22:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:18:22:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:18:22:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:18:22:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:18:22: done
+2022-11-09 15:18:22: Matches: 0
+2022-11-09 15:18:22: Enlapsed seconds: 0.003440529
+
+2022-11-09 15:19:26: Indexing example01.csv... skip
+2022-11-09 15:19:26: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:19:26: Searching into example01.ix_example01... 
+2022-11-09 15:19:26:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:19:26:  > 205693... not found (["linkedin.com/in/phillip-mccullough-08955132", "phillip.mccullough@vanderbilt.edu"])
+2022-11-09 15:19:26:  > 239928... not found (["linkedin.com/in/stehphanie-collins-87563a18", "scollins@ggrc.org"])
+2022-11-09 15:19:26:  > 257128... not found (["linkedin.com/in/tom-wilson-a2856b7a", "twilson@capitolboilerworks.com"])
+2022-11-09 15:19:26:  > 265702... not found (["linkedin.com/in/vincent-law-9801b59", "vlaw@ftc.gov"])
+2022-11-09 15:19:26:  > 270027... not found (["linkedin.com/in/wiebe-bartelink-a16b991", "wiebe.bartelink@msg-global.com"])
+2022-11-09 15:19:26:  > 272142... not found (["linkedin.com/in/yong-qiu-8b692b30", "yqiu@ibm.com"])
+2022-11-09 15:19:26:  > 273200... not found (["linkedin.com/in/yvan-chevrier-5ab81060", "yvan.chevrier@zimmerbiomet.com"])
+2022-11-09 15:19:26:  > 273757... not found (["linkedin.com/in/zevin-barnes-a563b742", "zbarnes@delphinus.com"])
+2022-11-09 15:19:26:  > 273998... not found (["linkedin.com/in/zrswedo", "zachary.swedo@buehler.com"])
+2022-11-09 15:19:26:  > 274148... not found (["linkedin.com/in/zulay-berrio-williams-mba-62193a34", "zwilliams@provident.org"])
+2022-11-09 15:19:26:  > 274216... not found (["linkedin.com/in/zulay-berrio-williams-mba-62193a34", "zwilliams@provident.org"])
+2022-11-09 15:19:26: done
+2022-11-09 15:19:26: Matches: 0
+2022-11-09 15:19:26: Enlapsed seconds: 0.003879781
+
+2022-11-09 15:20:42: Indexing example01.csv... skip
+2022-11-09 15:20:42: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:20:42: Searching into example01.ix_example01... 
+2022-11-09 15:20:42:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:20:42:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:20:42:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:20:42:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:20:42:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:20:42:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:20:42:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:20:42:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:20:42:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:20:42:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:20:42:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:20:42: done
+2022-11-09 15:20:42: Matches: 0
+2022-11-09 15:20:42: Enlapsed seconds: 0.003035446
+
+2022-11-09 15:23:36: Indexing example01.csv... skip
+2022-11-09 15:23:36: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:23:36: Searching into example01.ix_example01... 
+2022-11-09 15:23:36:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:23:36:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:23:36:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:23:36:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:23:36:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:23:36:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:23:36:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:23:36:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:23:36:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:23:36:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:23:36:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:23:36: done
+2022-11-09 15:23:36: Matches: 0
+2022-11-09 15:23:36: Enlapsed seconds: 0.003289461
+
+2022-11-09 15:25:35: Indexing example01.csv... skip
+2022-11-09 15:25:35: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:25:35: Searching into example01.ix_example01... 
+2022-11-09 15:25:35:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:25:35:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:25:35:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:25:35:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:25:35:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:25:35:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:25:35:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:25:35:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:25:35:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:25:35:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:25:35:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:25:35: done
+2022-11-09 15:25:35: Matches: 0
+2022-11-09 15:25:35: Enlapsed seconds: 0.003050357
+
+2022-11-09 15:26:27: Indexing example01.csv... skip
+2022-11-09 15:26:27: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:26:27: Searching into example01.ix_example01... 
+2022-11-09 15:26:27:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:26:27:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:26:27:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:26:27:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:26:27:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:26:27:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:26:27:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:26:27:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:26:27:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:26:27:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:26:27:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:26:27: done
+2022-11-09 15:26:27: Matches: 0
+2022-11-09 15:26:27: Enlapsed seconds: 0.002957448
+
+2022-11-09 15:26:57: Indexing example01.csv... skip
+2022-11-09 15:26:57: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:26:57: Searching into example01.ix_example01... 
+2022-11-09 15:26:57:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:26:57:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:26:57:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:26:57:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:26:57:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:26:57:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:26:57:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:26:57:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:26:57:  > 1446... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:26:57:  > 1184... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:26:57:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:26:57: done
+2022-11-09 15:26:57: Matches: 0
+2022-11-09 15:26:57: Enlapsed seconds: 0.003077482
+
+2022-11-09 15:31:15: Indexing example01.csv... skip
+2022-11-09 15:31:15: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:31:15: Searching into example01.ix_example01... 
+2022-11-09 15:31:15:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:31:15:  > 68436... not found (["linkedin.com/in/debra-fontaine-9a21a3b1", "dfontaine@cbsinsurance.com"])
+2022-11-09 15:31:15:  > 34049... not found (["linkedin.com/in/brigette-mills-5919377", "brigette.mills@safelite.com"])
+2022-11-09 15:31:15:  > 16878... not found (["linkedin.com/in/anthonydavis2", "adavis@dicerna.com"])
+2022-11-09 15:31:15:  > 8330... not found (["linkedin.com/in/amandabloom", "abloom@baskdigital.com"])
+2022-11-09 15:31:15:  > 4070... not found (["linkedin.com/in/alan-tomsic-21228430", "atomsic@ibm.com"])
+2022-11-09 15:31:15:  > 1937... not found (["linkedin.com/in/adriana-edeza-82176653", "edezaa@sutterhealth.org"])
+2022-11-09 15:31:15:  > 816... not found (["linkedin.com/in/abigail-grommet-630a2515", "agrommet@ttxinc.com"])
+2022-11-09 15:31:15:  > 1286... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:31:15:  > 1466... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:31:15: done
+2022-11-09 15:31:15: Matches: 0
+2022-11-09 15:31:15: Enlapsed seconds: 0.002527827
+
+2022-11-09 15:31:44: Indexing example01.csv... skip
+2022-11-09 15:31:44: Search term: ["linkedin.com/in/adammalone1"]
+2022-11-09 15:31:44: Searching into example01.ix_example01... 
+2022-11-09 15:31:44:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:31:44:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:31:44:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:31:44:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:31:44:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:31:44:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:31:44:  > 2076... not found (["linkedin.com/in/adriana-ventimiglia-a7003841", "adriana.ventimiglia@lvvwd.com"])
+2022-11-09 15:31:44:  > 977... not found (["linkedin.com/in/abigail-thompson-93941520", "abigail.thompson@ccsd.k12.wy.us"])
+2022-11-09 15:31:44:  > 1540... not found (["linkedin.com/in/adkins-margaret-26342414", "mfarrow@ci.grand-rapids.mi.us"])
+2022-11-09 15:31:44:  > 1278... not found (["linkedin.com/in/adam-gilbert-211816b6", "gilbert_adam@solarturbines.com"])
+2022-11-09 15:31:44:  > 1364... found (["linkedin.com/in/adammalone1", "adammalone@fdic.gov"])
+2022-11-09 15:31:44: done
+2022-11-09 15:31:44: Matches: 1
+2022-11-09 15:31:44: Enlapsed seconds: 0.003642394
+
+2022-11-09 15:32:14: Indexing example01.csv... skip
+2022-11-09 15:32:14: Search term: ["linkedin.com/in/alesha-reed-255928102"]
+2022-11-09 15:32:14: Searching into example01.ix_example01... 
+2022-11-09 15:32:14:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:32:14:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:32:14:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:32:14:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:32:14:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:32:14:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:32:14:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:32:14:  > 5313... not found (["linkedin.com/in/alexandra-engle-26280680", "aengle@doorwaysva.org"])
+2022-11-09 15:32:14:  > 4805... found (["linkedin.com/in/alesha-reed-255928102", "alesha.reed@asd20.org"])
+2022-11-09 15:32:14: done
+2022-11-09 15:32:14: Matches: 1
+2022-11-09 15:32:14: Enlapsed seconds: 0.002399042
+
+2022-11-09 15:32:25: Indexing example01.csv... skip
+2022-11-09 15:32:25: Search term: ["linkedin.com/in/alesha-reed-255928102"]
+2022-11-09 15:32:25: Searching into example01.ix_example01... 
+2022-11-09 15:32:25:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:32:25:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:32:25:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:32:25:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:32:25:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:32:25:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:32:25:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:32:25:  > 5313... not found (["linkedin.com/in/alexandra-engle-26280680", "aengle@doorwaysva.org"])
+2022-11-09 15:32:25:  > 4805... found (["linkedin.com/in/alesha-reed-255928102", "alesha.reed@asd20.org"])
+2022-11-09 15:32:25: done
+2022-11-09 15:32:25: Matches: 1
+2022-11-09 15:32:25: Enlapsed seconds: 0.002886536
+
+2022-11-09 15:32:31: Indexing example01.csv... skip
+2022-11-09 15:32:31: Search term: ["linkedin.com/in/alesha-reed"]
+2022-11-09 15:32:31: Searching into example01.ix_example01... 
+2022-11-09 15:32:31:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:32:31:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:32:31:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:32:31:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:32:31:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:32:31:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:32:31:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:32:31:  > 5313... not found (["linkedin.com/in/alexandra-engle-26280680", "aengle@doorwaysva.org"])
+2022-11-09 15:32:31:  > 4805... not found (["linkedin.com/in/alesha-reed-255928102", "alesha.reed@asd20.org"])
+2022-11-09 15:32:31:  > 4498... not found (["linkedin.com/in/aleli-salazar-7947b6112", "aleli.salazar@bakermckenzie.com"])
+2022-11-09 15:32:31: done
+2022-11-09 15:32:31: Matches: 0
+2022-11-09 15:32:31: Enlapsed seconds: 0.002553672
+
+2022-11-09 15:32:38: Indexing example01.csv... skip
+2022-11-09 15:32:38: Search term: ["linkedin.com/in/alesha-reed"]
+2022-11-09 15:32:38: Searching into example01.ix_example01... 
+2022-11-09 15:32:38:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:32:38:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:32:38:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:32:38:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:32:38:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:32:38:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:32:38:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:32:38:  > 5313... not found (["linkedin.com/in/alexandra-engle-26280680", "aengle@doorwaysva.org"])
+2022-11-09 15:32:38:  > 4805... found (["linkedin.com/in/alesha-reed-255928102", "alesha.reed@asd20.org"])
+2022-11-09 15:32:38: done
+2022-11-09 15:32:38: Matches: 1
+2022-11-09 15:32:38: Enlapsed seconds: 0.002814561
+
+2022-11-09 15:33:35: Indexing example01.csv... skip
+2022-11-09 15:33:35: Search term: ["linkedin.com/in/almu-dan-9808753a"]
+2022-11-09 15:33:35: Searching into example01.ix_example01... 
+2022-11-09 15:33:35:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:33:35:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:33:35:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:33:35:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:33:35:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:33:35:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:33:35:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:33:35:  > 7443... not found (["linkedin.com/in/allison-schwartz-267b8a6", "allison@faidesigngroup.com"])
+2022-11-09 15:33:35:  > 7939... not found (["linkedin.com/in/amanda-detemple-39b058122", "adetemple@ediscompany.com"])
+2022-11-09 15:33:35:  > 7701... not found (["linkedin.com/in/allyn-nalos-1a47a629", "allyn.nalos@huhealthcare.com"])
+2022-11-09 15:33:35:  > 7870... found (["linkedin.com/in/almu-dan-9808753a", "adan@sksales.com"])
+2022-11-09 15:33:35: done
+2022-11-09 15:33:35: Matches: 1
+2022-11-09 15:33:35: Enlapsed seconds: 0.003193197
+
+2022-11-09 15:33:55: Indexing example01.csv... skip
+2022-11-09 15:33:55: Search term: ["linkedin.com/in/almu-dan-9808753a", "adan@sksales.com"]
+2022-11-09 15:33:55: Searching into example01.ix_example01... 
+2022-11-09 15:33:55:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:33:55:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:33:55:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:33:55:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:33:55:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:33:55:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:33:55:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:33:55:  > 7443... not found (["linkedin.com/in/allison-schwartz-267b8a6", "allison@faidesigngroup.com"])
+2022-11-09 15:33:55:  > 7939... not found (["linkedin.com/in/amanda-detemple-39b058122", "adetemple@ediscompany.com"])
+2022-11-09 15:33:55:  > 7701... not found (["linkedin.com/in/allyn-nalos-1a47a629", "allyn.nalos@huhealthcare.com"])
+2022-11-09 15:33:55:  > 7870... found (["linkedin.com/in/almu-dan-9808753a", "adan@sksales.com"])
+2022-11-09 15:33:55: done
+2022-11-09 15:33:55: Matches: 1
+2022-11-09 15:33:55: Enlapsed seconds: 0.003587892
+
+2022-11-09 15:34:00: Indexing example01.csv... skip
+2022-11-09 15:34:00: Search term: ["linkedin.com/in/almu-dan-9808753a", "adan@sksales.net"]
+2022-11-09 15:34:00: Searching into example01.ix_example01... 
+2022-11-09 15:34:00:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:34:00:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:34:00:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:34:00:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:34:00:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:34:00:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:34:00:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:34:00:  > 7443... not found (["linkedin.com/in/allison-schwartz-267b8a6", "allison@faidesigngroup.com"])
+2022-11-09 15:34:00:  > 7939... not found (["linkedin.com/in/amanda-detemple-39b058122", "adetemple@ediscompany.com"])
+2022-11-09 15:34:00:  > 7701... not found (["linkedin.com/in/allyn-nalos-1a47a629", "allyn.nalos@huhealthcare.com"])
+2022-11-09 15:34:00:  > 7870... not found (["linkedin.com/in/almu-dan-9808753a", "adan@sksales.com"])
+2022-11-09 15:34:00: done
+2022-11-09 15:34:00: Matches: 0
+2022-11-09 15:34:00: Enlapsed seconds: 0.003267604
+
+2022-11-09 15:34:05: Indexing example01.csv... skip
+2022-11-09 15:34:05: Search term: ["linkedin.com/in/almu-dan-9808753a", "adan@sksales.nem"]
+2022-11-09 15:34:05: Searching into example01.ix_example01... 
+2022-11-09 15:34:05:  > 137177... not found (["linkedin.com/in/kameliarouhanislankard", "kslankard@pylusd.org"])
+2022-11-09 15:34:05:  > 68516... not found (["linkedin.com/in/debra-king-61b01654", "debra.king@chla.org"])
+2022-11-09 15:34:05:  > 34220... not found (["linkedin.com/in/brittany-kilps-a077b369", "brittanykilps@helgesen.com"])
+2022-11-09 15:34:05:  > 17049... not found (["linkedin.com/in/antonine-joseph-21852964", "antonine_joseph@chs.net"])
+2022-11-09 15:34:05:  > 8464... not found (["linkedin.com/in/amandamhoward", "howard@childrenmuseum.org"])
+2022-11-09 15:34:05:  > 4207... not found (["linkedin.com/in/aleck-choraitis-b2365b30", "aleck.choraitis@att.com"])
+2022-11-09 15:34:05:  > 6367... not found (["linkedin.com/in/allanna-yahoda-3260074a", "allanna.yahoda@ch2m.com"])
+2022-11-09 15:34:05:  > 7443... not found (["linkedin.com/in/allison-schwartz-267b8a6", "allison@faidesigngroup.com"])
+2022-11-09 15:34:05:  > 7939... not found (["linkedin.com/in/amanda-detemple-39b058122", "adetemple@ediscompany.com"])
+2022-11-09 15:34:05:  > 7701... not found (["linkedin.com/in/allyn-nalos-1a47a629", "allyn.nalos@huhealthcare.com"])
+2022-11-09 15:34:05:  > 7870... not found (["linkedin.com/in/almu-dan-9808753a", "adan@sksales.com"])
+2022-11-09 15:34:05: done
+2022-11-09 15:34:05: Matches: 0
+2022-11-09 15:34:05: Enlapsed seconds: 0.003441575
+
+2022-11-09 15:35:01: Indexing example01.csv... skip
+
+2022-11-09 15:35:24: Indexing example01.csv... skip
+
+2022-11-09 15:36:00: Indexing example01.csv... skip
+
+2022-11-09 15:36:09: Indexing example01.csv... skip
+
+2022-11-09 15:36:27: Indexing example01.csv... skip
+
+2022-11-09 15:36:37: Indexing example01.csv... skip
+
+2022-11-09 15:36:54: Indexing example01.csv... skip
+
+2022-11-09 15:37:46: Indexing example01.csv... done

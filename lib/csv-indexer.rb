@@ -19,6 +19,12 @@ module BlackStack
             i.index(write_log)
         end
 
+        def self.find(name, key, exact_match=true, write_log=false)
+            i = @indexes.select { |i| i.name = name }.first
+            raise 'Index not found.' if i.nil?
+            i.find(key, exact_match, write_log)
+        end
+
         # define Index class
         class Index
             attr_accessor :name, :description, :input, :output, :log, :mapping, :keys, :logger
@@ -183,28 +189,32 @@ module BlackStack
             def compare_keys(key1, key2, exact_match=true)
                 match = true
                 # get the keys as arrays
-                a1 = key1.split('|')
-                a2 = key2.split('|')
+                a1 = key1 #.split('|')
+                a2 = key2 #.split('|')
+                # validation: a2.size > a1.size
+                raise 'The key2 must has more elements than key1.' if a2.size < a1.size
                 # iterate the arrays
                 a2.each_with_index do |k, i|
-                    match = false of k !~ /#{Regexp.escape(a1[i])}/i
+                    match = false if k !~ /#{Regexp.escape(a1[i].to_s)}/i
                 end
                 return 0 if match && !exact_match
                 # return the result
                 # iterate the arrays
                 a1.each_with_index do |k, i|
                     # if the keys are different, return the result
-                    return 1 if k < a2[i]
-                    return -1 if k > a2[i]
+                    if k < a2[i]
+                        return 1
+                    elsif k > a2[i]
+                        return -1
+                    end
                 end
                 # if the keys are equal, return 0
                 return 0
-                end
             end
 
             # search the index.
             # return a hash description with the matches, and a brief performance report.
-            def find(key, exact_match=true, write_log=true)
+            def find(key, exact_match=true, write_log=false)
                 # if key is an string, convert it into an array of 1 element
                 key = [key] if key.is_a?(String)
 
@@ -212,12 +222,12 @@ module BlackStack
                 ret = {
                     :matches => [],
                 }
-            
+
                 # define the logger to use
                 l = write_log ? self.logger : BlackStack::DummyLogger.new
                         
                 # define the source
-                source = "#{File.expand_path(self.output)}/*.#{ext})}"
+                source = "#{File.expand_path(self.output)}/*.#{self.name}"
 
                 # start time
                 start_time = Time.now
@@ -226,7 +236,7 @@ module BlackStack
                 total_matches = 0
             
                 # searching in the indexed files
-                l.log "Search term: #{search.to_s}"
+                l.log "Search term: #{key.to_s}"
                 files = Dir.glob(source)
                 n = 0 
                 files.each do |file|
@@ -280,7 +290,7 @@ module BlackStack
                         fields = CSV.parse_line(line)
                         row_key = fields[0].split('|')
                         # compare keys
-                        x = compare_keys(keys, row_keys, exact_match)
+                        x = compare_keys(key, row_key, exact_match)
                         # compare the first field with the search term
                         if x == 0
                             # found
@@ -290,12 +300,12 @@ module BlackStack
                             break
                         else
                             # not found
-                            if x == -1
+                            if x == 1
                                 # search in the down half
-                                i = middle
-                            else
-                                # search in the up half
                                 max = middle
+                            else #if x == -1
+                                # search in the up half
+                                i = middle + line.size+1
                             end
                             l.logf "not found (#{row_key})"
                         end

@@ -15,7 +15,7 @@ gem install csv-indexer
 1. Download a sample CSV file in the same directory where you are running your Ruby script:
 
 ```bash
-wget https://raw.githubusercontent.com/leandrosardi/csv-indexer/main/examples/example01.rb
+wget https://raw.githubusercontent.com/leandrosardi/csv-indexer/main/examples/example.csv
 ```
 
 2. In your Ruby script, require the `csv-indexer` gem.

@@ -14,19 +14,19 @@ gem install csv-indexer
 
 ## 2. Quick Start
 
-1. Download a sample CSV file in the same directory where you are running your Ruby script:
+**Step 1.** Download a sample CSV file in the same directory where you are running your Ruby script:
 
 ```bash
 wget https://raw.githubusercontent.com/leandrosardi/csv-indexer/main/examples/example.csv
 ```
 
-2. In your Ruby script, require the `csv-indexer` gem.
+**Step 2.** In your Ruby script, require the `csv-indexer` gem.
 
 ```ruby
 require 'csv-indexer'
 ```
 
-3. Setup the index for that CSV file.
+**Step 3.** Setup the index for that CSV file.
 
 ```ruby
 # define the indexation of for `example.csv`
@@ -71,7 +71,7 @@ source = BlackStack::CSVIndexer.add_indexation({
 })
 ```
 
-4. Run the indexation
+**Step 4.** Run the indexation
 
 Add this line to build the index.
 
@@ -91,7 +91,7 @@ E.g.:
 split -C 500m --numeric-suffixes input_filename
 ```
 
-5. Searching for a specific LinkedIn URL in your index.
+**Step 5.** Searching for a specific LinkedIn URL in your index.
 
 ```ruby
 ret = BlackStack::CSVIndexer.find('ix_example01', 'linkedin.com/in/almu-dan-9808753a')

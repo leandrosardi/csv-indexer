@@ -80,6 +80,17 @@ BlackStack::CSVIndexer.index('ix_example01')
 # => 2022-11-09 15:37:46: Indexing example.csv... done
 ```
 
+**Note:**
+
+For better performance, the `index` method loads the whole file to memory.
+So, if you have `csv` files higher than 500MB, it is advisable you split then in chunks using the `split` command.
+
+E.g.:
+
+```bash
+split -C 500m --numeric-suffixes input_filename
+```
+
 5. Searching for a specific LinkedIn URL in your index.
 
 ```ruby

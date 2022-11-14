@@ -120,30 +120,34 @@ module BlackStack
                         a = []
                         # iterate lines if input_file
                         input_file.each_line do |line|
-                            i += 1
-                            fields = []
-                            key = []
-                            # get the array of fields
-                            row = CSV.parse_line(line)
-                            # build the key
-                            self.keys.each do |k|
-                                colnum = self.mapping[k]
-                                # replace '"' by empty string, and '|' with ','  
-                                key << row[colnum].gsub('"', '').gsub('|', ',')
+                            begin
+                                i += 1
+                                fields = []
+                                key = []
+                                # get the array of fields
+                                row = CSV.parse_line(line)
+                                # build the key
+                                self.keys.each do |k|
+                                    colnum = self.mapping[k]
+                                    # replace '"' by empty string, and '|' with ','  
+                                    key << row[colnum].gsub('"', '').gsub('|', ',')
+                                end
+                                key = "\"#{key.join('|')}\""
+                                # add the key as the first field of the index line
+                                fields << key
+                                # add the row number as the second field of the index line
+                                fields << "\"#{i.to_s}\""
+                                # iterate the mapping
+                                self.mapping.each do |k, v|
+                                    # get the data from the row
+                                    # format the field values for the CSV
+                                    fields << "\"#{row[v].to_s.gsub('"', '')}\""
+                                end
+                                # add fields to the array
+                                a << fields
+                            rescue => e
+                                # what to do with this?
                             end
-                            key = "\"#{key.join('|')}\""
-                            # add the key as the first field of the index line
-                            fields << key
-                            # add the row number as the second field of the index line
-                            fields << "\"#{i.to_s}\""
-                            # iterate the mapping
-                            self.mapping.each do |k, v|
-                                # get the data from the row
-                                # format the field values for the CSV
-                                fields << "\"#{row[v].gsub('"', '')}\""
-                            end
-                            # add fields to the array
-                            a << fields
                         end
                         # sort the array
                         a.sort!

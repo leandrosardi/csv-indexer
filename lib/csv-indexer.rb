@@ -120,30 +120,34 @@ module BlackStack
                         a = []
                         # iterate lines if input_file
                         input_file.each_line do |line|
-                            i += 1
-                            fields = []
-                            key = []
-                            # get the array of fields
-                            row = CSV.parse_line(line)
-                            # build the key
-                            self.keys.each do |k|
-                                colnum = self.mapping[k]
-                                # replace '"' by empty string, and '|' with ','  
-                                key << row[colnum].gsub('"', '').gsub('|', ',')
+                            begin
+                                i += 1
+                                fields = []
+                                key = []
+                                # get the array of fields
+                                row = CSV.parse_line(line)
+                                # build the key
+                                self.keys.each do |k|
+                                    colnum = self.mapping[k]
+                                    # replace '"' by empty string, and '|' with ','  
+                                    key << row[colnum].gsub('"', '').gsub('|', ',')
+                                end
+                                key = "\"#{key.join('|')}\""
+                                # add the key as the first field of the index line
+                                fields << key
+                                # add the row number as the second field of the index line
+                                fields << "\"#{i.to_s}\""
+                                # iterate the mapping
+                                self.mapping.each do |k, v|
+                                    # get the data from the row
+                                    # format the field values for the CSV
+                                    fields << "\"#{row[v].to_s.gsub('"', '')}\""
+                                end
+                                # add fields to the array
+                                a << fields
+                            rescue => e
+                                # what to do with this?
                             end
-                            key = "\"#{key.join('|')}\""
-                            # add the key as the first field of the index line
-                            fields << key
-                            # add the row number as the second field of the index line
-                            fields << "\"#{i.to_s}\""
-                            # iterate the mapping
-                            self.mapping.each do |k, v|
-                                # get the data from the row
-                                # format the field values for the CSV
-                                fields << "\"#{row[v].gsub('"', '')}\""
-                            end
-                            # add fields to the array
-                            a << fields
                         end
                         # sort the array
                         a.sort!
@@ -265,50 +269,54 @@ module BlackStack
                         prev = middle
                         # opening log line
                         l.logs "#{middle}... "
-                        # go to the middle of the file
-                        f.seek(middle)
-                        # read the line
-                        # the cursor is at the middle of a line
-                        # so, I have to read a second line to get a full line
-                        line = f.readline 
-                        # most probably I landed in the midle of a line, so I have to get the size of the line where I landed.
-                        a = line.split('","')
-                        while a.size < 2 # this saves the situation when the cursor is inside the last field where I place the size of the line
-                            middle -= 1
+                        begin
+                            # go to the middle of the file
+                            f.seek(middle)
+                            # read the line
+                            # the cursor is at the middle of a line
+                            # so, I have to read a second line to get a full line
+                            line = f.readline 
+                            # most probably I landed in the midle of a line, so I have to get the size of the line where I landed.
+                            a = line.split('","')
+                            while a.size < 2 # this saves the situation when the cursor is inside the last field where I place the size of the line
+                                middle -= 1
+                                f.seek(middle)
+                                line = f.readline
+                                a = line.split('","')
+                            end
+                            line_size = a.last.gsub('"', '').to_i
+                            middle -= line_size-line.size+1
+                            # seek and readline again, to get the line from its begining
                             f.seek(middle)
                             line = f.readline
-                            a = line.split('","')
-                        end
-                        line_size = a.last.gsub('"', '').to_i
-                        middle -= line_size-line.size+1
-                        # seek and readline again, to get the line from its begining
-                        f.seek(middle)
-                        line = f.readline
-                        # strip the line
-                        line.strip!
-                        # get the first field of the CSV line
-                        fields = CSV.parse_line(line)
-                        row_key = fields[0].split('|')
-                        # compare keys
-                        x = compare_keys(key, row_key, exact_match)
-                        # compare the first field with the search term
-                        if x == 0
-                            # found
-                            l.logf "found (#{row_key})"
-                            ret[:matches] << fields.dup
-                            total_matches += 1
-                            break
-                        else
-                            # not found
-                            if x == 1
-                                # search in the down half
-                                max = middle
-                            else #if x == -1
-                                # search in the up half
-                                i = middle + line.size+1
+                            # strip the line
+                            line.strip!
+                            # get the first field of the CSV line
+                            fields = CSV.parse_line(line)
+                            row_key = fields[0].split('|')
+                            # compare keys
+                            x = compare_keys(key, row_key, exact_match)
+                            # compare the first field with the search term
+                            if x == 0
+                                # found
+                                l.logf "found (#{row_key})"
+                                ret[:matches] << fields.dup
+                                total_matches += 1
+                                break
+                            else
+                                # not found
+                                if x == 1
+                                    # search in the down half
+                                    max = middle
+                                else #if x == -1
+                                    # search in the up half
+                                    i = middle + line.size+1
+                                end
+                                l.logf "not found (#{row_key})"
                             end
-                            l.logf "not found (#{row_key})"
-                        end
+                        rescue => e
+                            l.logf "error: #{e.message}"
+                        end # begin
                     end
                     # closing the file
                     f.close
@@ -322,6 +330,7 @@ module BlackStack
             
                 ret[:enlapsed_seconds] = end_time - start_time
                 ret[:lines_matched] = total_matches
+                ret[:files_processed] = n
             
                 l.log "Matches: #{total_matches.to_s}"
                 l.log "Enlapsed seconds: #{ret[:enlapsed_seconds].to_s}"

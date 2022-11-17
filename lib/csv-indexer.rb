@@ -99,6 +99,7 @@ module BlackStack
                 l = write_log ? self.logger : BlackStack::DummyLogger.new
                 # output file extension
                 ext = ".#{self.name}"
+                
                 # index the bites
                 Dir.glob(input).each do |file|
                     # get the name of the file from the full path
@@ -252,7 +253,7 @@ module BlackStack
                     l.logs "Searching into #{name}... "
                     # setting boundaries for the binary search
                     i = 0
-                    max = `wc -c #{file}`.split(' ').first.to_i
+                    max = `wc -c '#{file}'`.split(' ').first.to_i
                     middle = ((i + max) / 2).to_i
                     # totals
                     # open file with random access

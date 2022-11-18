@@ -198,9 +198,11 @@ module BlackStack
                 a2 = key2 #.split('|')
                 # validation: a2.size > a1.size
                 raise 'The key2 must has more elements than key1.' if a2.size < a1.size
+#binding.pry if a2[0].include?('anubhava-mishra-1b668124')
                 # iterate the arrays
                 a2.each_with_index do |k, i|
-                    match = false if k !~ /#{Regexp.escape(a1[i].to_s)}/i
+#binding.pry if k.include?('anubhava-mishra-1b668124')
+                    match = false if k !~ /^#{Regexp.escape(a1[i].to_s)}/i
                 end
                 return 0 if match && !exact_match
                 # return the result
@@ -265,18 +267,23 @@ module BlackStack
                         # get the middle of the file
                         middle = ((i + max) / 2).to_i
                         # break if the middle is the same as the previous iteration
+#binding.pry if middle==prev
                         break if middle==prev
                         # remember the middle in this iteration
                         prev = middle
                         # opening log line
                         l.logs "#{middle}... "
+                        # processing the line
+                        line = ''
+                        line_size = 0
                         begin
                             # go to the middle of the file
                             f.seek(middle)
                             # read the line
                             # the cursor is at the middle of a line
                             # so, I have to read a second line to get a full line
-                            line = f.readline 
+                            line = f.readline.encode('UTF-8', :undef => :replace, :invalid => :replace, :replace => " ")
+#binding.pry if line.include?('anubhav521@gmail.com')
                             # most probably I landed in the midle of a line, so I have to get the size of the line where I landed.
                             a = line.split('","')
                             while a.size < 2 # this saves the situation when the cursor is inside the last field where I place the size of the line
@@ -289,13 +296,20 @@ module BlackStack
                             middle -= line_size-line.size+1
                             # seek and readline again, to get the line from its begining
                             f.seek(middle)
-                            line = f.readline
+                            line = f.readline.encode('UTF-8', :undef => :replace, :invalid => :replace, :replace => " ")
+                            # BAD PRACTIVCE PATCH: sometimes the new value of middle (`middle -= line_size-line.size+1`) doesn't hit the starting of the line.
+                            while line[0] != '"' 
+                                middle -= 1
+                                f.seek(middle)
+                                line = f.readline.encode('UTF-8', :undef => :replace, :invalid => :replace, :replace => " ")
+                            end
                             # strip the line
                             line.strip!
                             # get the first field of the CSV line
                             fields = CSV.parse_line(line)
                             row_key = fields[0].split('|')
                             # compare keys
+#binding.pry if line.include?('anubhava-mishra-1b668124')
                             x = compare_keys(key, row_key, exact_match)
                             # compare the first field with the search term
                             if x == 0
@@ -316,7 +330,10 @@ module BlackStack
                                 l.logf "not found (#{row_key})"
                             end
                         rescue => e
-                            l.logf "error: #{e.message}"
+                            l.logf "error in line `#{line}`: #{e.to_console}"
+                            # change the max, in order to don't repeat the same iteration and exit the loop in the line `break if middle==prev`
+                            #i+=1
+                            #max+=1
                         end # begin
                     end
                     # closing the file
@@ -325,8 +342,11 @@ module BlackStack
                     l.done
                     # increment file counter
                     n += 1
+                    # tracing log
+                    l.log "i: #{i.to_s}"
+                    l.log "max: #{max.to_s}"                    
                 end
-            
+                # end time
                 end_time = Time.now
             
                 ret[:enlapsed_seconds] = end_time - start_time

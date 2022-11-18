@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'csv-indexer'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.date        = '2022-11-08'
   s.summary     = "CSV Indexer makes it simple the indexation and searching in lasge CSV files."
   s.description = "CSV Indexer makes it simple the indexation and searching in lasge CSV files. It is not as robust as Lucence, but it is simple and cost-effective. May index files with millions of rows and find specific rows in matter of seconds. Find documentation here: https://github.com/leandrosardi/csv-indexer."

@@ -177,6 +177,11 @@ module BlackStack
                 end
             end # def index
 
+            # this method is for internal use only.
+            # it is used to search the index file.
+            # the end user should not call this method.
+            # the end user should use the find method.
+            #
             # compare 2 keys.
             # if !exact_match and if each value in key1 is included in the key2, return 0 
             # otherwise, return 0 if equal, -1 if key1 < key2, 1 if key1 > key2
@@ -198,10 +203,8 @@ module BlackStack
                 a2 = key2 #.split('|')
                 # validation: a2.size > a1.size
                 raise 'The key2 must has more elements than key1.' if a2.size < a1.size
-#binding.pry if a2[0].include?('anubhava-mishra-1b668124')
                 # iterate the arrays
                 a2.each_with_index do |k, i|
-#binding.pry if k.include?('anubhava-mishra-1b668124')
                     match = false if k !~ /^#{Regexp.escape(a1[i].to_s)}/i
                 end
                 return 0 if match && !exact_match
@@ -224,24 +227,16 @@ module BlackStack
             def find(key, exact_match=true, write_log=false)
                 # if key is an string, convert it into an array of 1 element
                 key = [key] if key.is_a?(String)
-
                 # build the response.
-                ret = {
-                    :matches => [],
-                }
-
+                ret = { :matches => [] }
                 # define the logger to use
-                l = write_log ? self.logger : BlackStack::DummyLogger.new
-                        
+                l = write_log ? self.logger : BlackStack::DummyLogger.new       
                 # define the source
                 source = "#{File.expand_path(self.output)}/*.#{self.name}"
-
                 # start time
                 start_time = Time.now
-            
                 # totals
                 total_matches = 0
-            
                 # searching in the indexed files
                 l.log "Search term: #{key.to_s}"
                 files = Dir.glob(source)
@@ -267,7 +262,6 @@ module BlackStack
                         # get the middle of the file
                         middle = ((i + max) / 2).to_i
                         # break if the middle is the same as the previous iteration
-#binding.pry if middle==prev
                         break if middle==prev
                         # remember the middle in this iteration
                         prev = middle
@@ -283,7 +277,6 @@ module BlackStack
                             # the cursor is at the middle of a line
                             # so, I have to read a second line to get a full line
                             line = f.readline.encode('UTF-8', :undef => :replace, :invalid => :replace, :replace => " ")
-#binding.pry if line.include?('anubhav521@gmail.com')
                             # most probably I landed in the midle of a line, so I have to get the size of the line where I landed.
                             a = line.split('","')
                             while a.size < 2 # this saves the situation when the cursor is inside the last field where I place the size of the line
@@ -309,7 +302,6 @@ module BlackStack
                             fields = CSV.parse_line(line)
                             row_key = fields[0].split('|')
                             # compare keys
-#binding.pry if line.include?('anubhava-mishra-1b668124')
                             x = compare_keys(key, row_key, exact_match)
                             # compare the first field with the search term
                             if x == 0
@@ -358,6 +350,13 @@ module BlackStack
 
                 ret 
             end # def find
+
+            # basd on the `:mapping` descriptor of the index, decide which position of a `row` is the `key`.
+            # return `nil` if the `key` not exists
+            def position_of(key)
+                ret = self.mapping.to_a.map { |m| m[0].to_s }.index(key.to_s)
+                ret.to_s.size > 0 ? ret : nil
+            end
         end
     end # module CSVIndexer
 end # module BlackStack
